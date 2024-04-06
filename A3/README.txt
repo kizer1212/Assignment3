@@ -10,6 +10,8 @@ Project Structure:
 Purpose:
 This project consists of a set of HTML files representing different pages of a website (index.html, aboutMe.html, CV.html, infoSec.html) and a single CSS file (styles.css) for styling these pages uniformly. The README.txt file provides an overview of the project structure, explains the purpose of each file, and documents the CSS styling.
 
+Hoisted Site: https://github.com/kizer1212/Assignment3/tree/main/A3
+
 File Descriptions:
 
 1. index.html:
