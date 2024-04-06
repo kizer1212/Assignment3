@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <button id="scheme1Btn" onclick="changeColorScheme('scheme1')">Color Scheme 1</button>
+<button id="scheme2Btn" onclick="changeColorScheme('scheme2')">Color Scheme 2</button>
+<button id="scheme3Btn" onclick="changeColorScheme('scheme3')">Color Scheme 3</button>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="aboutMe.html">About Me</a>
+      <a href="CV.html">CV</a>
+      <a href="infoSec.html">InfoSecurity</a>
+      <a href="form.html">Contact Form</a> <!-- Added link to Contact Form -->
+    </div>
+    
+    <!-- Form -->
+    <div style="padding: 20px;">
+        <h2>Form Validation</h2>
+        <form id="myForm">
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName"><br>
+            <span id="firstNameError" class="error"></span><br>
+
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName"><br>
+            <span id="lastNameError" class="error"></span><br>
+
+            <label for="phoneNumber">Phone Number:</label><br>
+            <input type="text" id="phoneNumber" name="phoneNumber"><br>
+            <span id="phoneNumberError" class="error"></span><br>
+
+            <label for="emailCheckbox">Do you want my phone number?</label>
+            <input type="checkbox" id="phoneCheckbox" name="phoneCheckbox"><br>
+            
+            <label for="emailCheckbox">Do you want my email?</label>
+            <input type="checkbox" id="emailCheckbox" name="emailCheckbox"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/evan.young7/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/evan.young.79274" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/evan-young-1754692b4/" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            let firstName = document.getElementById("firstName").value;
+            let lastName = document.getElementById("lastName").value;
+            let phoneNumber = document.getElementById("phoneNumber").value;
+            let phoneCheckbox = document.getElementById("phoneCheckbox").checked;
+            let emailCheckbox = document.getElementById("emailCheckbox").checked;
+
+            // Validation
+            let isValid = true;
+
+            // First name validation
+            if (!/^[A-Z][a-z]*$/.test(firstName)) {
+                document.getElementById("firstNameError").textContent = "First name must start with a capital letter.";
+                isValid = false;
+            } else {
+                document.getElementById("firstNameError").textContent = "";
+            }
+
+            // Last name validation
+            if (!/^[A-Z][a-z]*$/.test(lastName)) {
+                document.getElementById("lastNameError").textContent = "Last name must start with a capital letter.";
+                isValid = false;
+            } else {
+                document.getElementById("lastNameError").textContent = "";
+            }
+
+            // Phone number validation
+            if (!/^\d{10}$/.test(phoneNumber)) {
+                document.getElementById("phoneNumberError").textContent = "Phone number must be 10 digits.";
+                isValid = false;
+            } else {
+                document.getElementById("phoneNumberError").textContent = "";
+            }
+
+            // Output
+            if (isValid) {
+                let output = "Evan Young, ";
+                if (phoneCheckbox) {
+                    output += "587 577 9382";
+                }
+                if (emailCheckbox) {
+                    if (phoneCheckbox) output += " and ";
+                    output += "ev498849@dal.ca";
+                }
+                alert(output);
+            }
+        });
+    </script>
+</body>
+</html>

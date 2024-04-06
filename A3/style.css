@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+
+.navbar {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Styles for the toggle button */
+button#toggleText {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button#toggleText:hover {
+    background-color: #555;
+}
+
+/* Styles for text color toggling */
+.text-color-toggle {
+    color: white; /* Default text color */
+}
+
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+body {
+    background-color: #333333; 
+    color: white; 
+    margin: 0;
+    padding-bottom: 60px; 
+    font-family: Arial, sans-serif;
+}
+
+.navbar,
+.social-links {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.navbar a,
+.social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover,
+.social-links a:hover {
+    background-color: #333;
+}
+
+.social-links {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+.image-link {
+    display: inline-block;
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 20px;
+}
+
+.image-link img {
+    display: block; 
+}
+
+
+
+ul, ol {
+    margin: 10;
+    padding: 10;
+    list-style:square;
+}
+
+
+
+
+
+li {
+    margin-bottom: 8px; 
+}
+
+
+li > strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+
+li ul,
+li ol {
+    margin-top: 10px; 
+    margin-left: 20px; 
+}
+
+
+li::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #333; 
+    margin: 10px 0; 
+}
+
+
+a {
+    color: white; 
+    text-decoration: underline; 
+}
+
+
+a:hover {
+    color: #666; 
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    button#toggleLight {
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* Define color schemes */
+.scheme1 {
+    --primary-color: #ff6347; /* Coral */
+    --secondary-color: #4169e1; /* Royal Blue */
+    --text-color: #333; /* Dark Gray */
+}
+
+.scheme2 {
+    --primary-color: #20b2aa; /* Light Sea Green */
+    --secondary-color: #9932cc; /* Dark Orchid */
+    --text-color: #555; /* Medium Gray */
+}
+
+.scheme3 {
+    --primary-color: #ffa500; /* Orange */
+    --secondary-color: #008080; /* Teal */
+    --text-color: #666; /* Gray */
+}
+
+/* Apply color scheme to elements */
+.scheme1 .content,
+.scheme2 .content,
+.scheme3 .content {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.scheme1 .navbar,
+.scheme2 .navbar,
+.scheme3 .navbar {
+    background-color: var(--secondary-color);
+}
+
+.scheme1 .social-links a,
+.scheme2 .social-links a,
+.scheme3 .social-links a {
+    color: var(--text-color);
+}
